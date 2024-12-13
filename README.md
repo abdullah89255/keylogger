@@ -54,7 +54,7 @@ Virtual environments isolate your Python dependencies from the system, preventin
    ```
 Ensure you have `PyInstaller` installed:
 ```bash
-python3 pip install pyinstaller
+ pip install pyinstaller
 ```
 
 ####  **Use `pipx` for Application Isolation**
