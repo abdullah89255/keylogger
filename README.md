@@ -11,11 +11,13 @@
 git clone https://github.com/Hackpy3/keylogger
 cd keylogger
 ```
+```bash
+pip install -r requirements.txt --break-system-packages
+```
 ---
 
 ####  **Use a Virtual Environment (Recommended)**
 Virtual environments isolate your Python dependencies from the system, preventing conflicts. Here's how to use one:
-
 
 
  **Install Required Packages**:
