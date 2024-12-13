@@ -15,8 +15,29 @@ This Python script is a basic keylogger for educational purposes. It logs all ke
 This message is specific to Python on systems like **Kali Linux**, where Python package installations are managed to avoid potential system conflicts. It indicates that the environment is configured to prevent global changes to Python packages. To install external Python packages, you have a few options:
 
 ---
+### . Debugging Tips
+If the issue persists:
+ **Check PyInstaller Logs**:
+   PyInstaller logs the build process. Look for error messages in the console.
+   
+ **Run PyInstaller Manually**:
+   ```bash
+   pyinstaller --noconsole -F k.py
+   ```
 
-#### 1. **Install System-Wide Using `apt`**
+ **Check Permissions**:
+   Ensure you have write access to the directory.
+
+ **Environment**:
+   Use a virtual environment to avoid dependency conflicts:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install pyinstaller
+   ```
+
+---
+####  **Install System-Wide Using `apt`**
 For packages available through `apt`, you can use:
 ```bash
 sudo apt install python3-pynput
@@ -25,32 +46,32 @@ This is the safest method for system-wide installation.
 
 ---
 
-#### 2. **Use a Virtual Environment (Recommended)**
+####  **Use a Virtual Environment (Recommended)**
 Virtual environments isolate your Python dependencies from the system, preventing conflicts. Here's how to use one:
 
-1. **Create a Virtual Environment**:
+ **Create a Virtual Environment**:
    ```bash
    python3 -m venv myenv
    ```
 
-2. **Activate the Virtual Environment**:
+ **Activate the Virtual Environment**:
    ```bash
    source myenv/bin/activate
    ```
 
-3. **Install Required Packages**:
+ **Install Required Packages**:
    Inside the activated environment, install the `pynput` library:
    ```bash
    pip install pynput
    ```
 
-4. **Run Your Python Scripts**:
+ **Run Your Python Scripts**:
    Use the Python interpreter from the virtual environment:
    ```bash
    myenv/bin/python k.py
    ```
 
-5. **Deactivate the Environment**:
+ **Deactivate the Environment**:
    When done, deactivate it with:
    ```bash
    deactivate
@@ -60,7 +81,7 @@ Ensure you have `PyInstaller` installed:
 pip install pyinstaller
 ```
 
-#### 3. **Use `pipx` for Application Isolation**
+####  **Use `pipx` for Application Isolation**
 `pipx` installs Python applications in isolated environments. Install `pipx` first:
 ```bash
 sudo apt install pipx
@@ -73,7 +94,7 @@ pipx install pynput
 
 ---
 
-#### 4. **Override System Restriction (Not Recommended)**
+####  **Override System Restriction (Not Recommended)**
 If you understand the risks, you can force `pip` to install packages system-wide using:
 ```bash
 pip install --break-system-packages pynput
