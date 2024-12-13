@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright 2017 BeeLogger
-# Written by: * Alisson Moretto - 4w4k3
-# https://github.com/4w4k3/BeeLogger
+# Written by: * Hackpy3 
+# https://github.com/Hackpy3/keylogger
 # Licensed under the BSD-3-Clause
 import os
 import sys
@@ -27,7 +27,7 @@ def warn():
             \ (     ) /                    DISABLE IT ON
  ____________(%%%%%%%)____________                 TARGET IN MSCONFIG !
 (     /   /  )%%%%%%%(  \   \     )
-(___/___/__/           \__\___\___)     https://github.com/4w4k3/BeeLogger
+(___/___/__/           \__\___\___)    https://github.com/Hackpy3/keylogger
    (     /  / (%%%%%%) \  \     )
     (__/___/   (%%%%)  \___\__)
 ''' + RED + '''       [ Disclaimer Alert ]''' + YELLOW +  '''
@@ -43,7 +43,7 @@ def heading():
                 .' '. I BEE YOU  __
        .        .   .          \(__\_/             Version: 2.3
         .         .         . -{{#(|8)
-          ' .  . ' ' .  . '    /(__/ \      by:''' + WHITE + ' Alisson Moretto (' + YELLOW + '4w4k3' + WHITE + ')' + '\n' + '\n' + END)
+          ' .  . ' ' .  . '    /(__/ \      by:''' + WHITE + ' Hackpy3 (' + YELLOW + '4w4k3' + WHITE + ')' + '\n' + '\n' + END)
     print(' {0}[{1}K{0}]{1} Generate Keylogger  {0}[{1}U{0}]{1} Update  {0}[{1}Q{0}]{1} Quit  '.format(YELLOW, WHITE) + '\n')
 
 def pp():
