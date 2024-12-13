@@ -12,40 +12,83 @@ This Python script is a basic keylogger for educational purposes. It logs all ke
 - Option to create a `.exe` file using PyInstaller for easy distribution.
 
 ## Usage 🚀
+This message is specific to Python on systems like **Kali Linux**, where Python package installations are managed to avoid potential system conflicts. It indicates that the environment is configured to prevent global changes to Python packages. To install external Python packages, you have a few options:
 
-### 1. Run the Keylogger
+---
+
+#### 1. **Install System-Wide Using `apt`**
+For packages available through `apt`, you can use:
+```bash
+sudo apt install python3-pynput
+```
+This is the safest method for system-wide installation.
+
+---
+
+#### 2. **Use a Virtual Environment (Recommended)**
+Virtual environments isolate your Python dependencies from the system, preventing conflicts. Here's how to use one:
+
+1. **Create a Virtual Environment**:
+   ```bash
+   python3 -m venv myenv
+   ```
+
+2. **Activate the Virtual Environment**:
+   ```bash
+   source myenv/bin/activate
+   ```
+
+3. **Install Required Packages**:
+   Inside the activated environment, install the `pynput` library:
+   ```bash
+   pip install pynput
+   ```
+
+4. **Run Your Python Scripts**:
+   Use the Python interpreter from the virtual environment:
+   ```bash
+   myenv/bin/python k.py
+   ```
+
+5. **Deactivate the Environment**:
+   When done, deactivate it with:
+   ```bash
+   deactivate
+   ```
+Ensure you have `PyInstaller` installed:
+```bash
+pip install pyinstaller
+```
+
+#### 3. **Use `pipx` for Application Isolation**
+`pipx` installs Python applications in isolated environments. Install `pipx` first:
+```bash
+sudo apt install pipx
+```
+
+Then, use `pipx` to install and manage the `pynput` library:
+```bash
+pipx install pynput
+```
+
+---
+
+#### 4. **Override System Restriction (Not Recommended)**
+If you understand the risks, you can force `pip` to install packages system-wide using:
+```bash
+pip install --break-system-packages pynput
+```
+**⚠️ Warning**: This can potentially break system-installed Python applications.
+
+---
+
+###  Run the Keylogger
 To start the keylogger, simply execute the script:
 ```bash
 python keylogger.py
 ```
 The keylogger will log all keystrokes to a file named `log.txt`. Press `Esc` to stop the keylogger.
 
-### 2. Create an Executable
-To create a standalone executable:
-```bash
-python keylogger.py --create-exe
-```
-Ensure you have `PyInstaller` installed:
-```bash
-pip install pyinstaller
-```
-
-### Example 📝
-#### Running the Keylogger:
-```bash
-python keylogger.py
-```
-- Typed: `Hello World!`
-- Logged Output in `log.txt`:
-  ```
-  Hello World!
-  ```
-
-#### Creating the Executable:
-```bash
-python keylogger.py --create-exe
-```
-Output: A standalone `.exe` file will be created in the `dist` directory.
 
 ## Requirements 📦
 - Python 3.6 or higher
